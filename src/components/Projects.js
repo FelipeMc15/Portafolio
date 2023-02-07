@@ -26,7 +26,7 @@ export const Projects = () => {
       title: "Hackaton MiduDev",
       description: "NutriPlanes AI",
       imgUrl: projImg3,
-      href: "https://nutreplanes.netlify.app/",
+      href: "https://nutriplanes.netlify.app/",
     },
     {
       title: "App de Notas y Control De Adultos Mayores",
@@ -42,38 +42,29 @@ export const Projects = () => {
         <Row>
           <Col size={12}>
             <TrackVisibility>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__fadeIn" : ""
-                  }
-                >
-                  <h2>Projectos</h2>
-                  <p className="text-width">
-                    Aquí verás mis trabajos en tecnologías como HTML, CSS,
-                    JavaScript y frameworks como React. Cada proyecto demuestra
-                    mi capacidad para trabajar en equipo, resolver problemas y
-                    cumplir requisitos. Espero que mi experiencia te inspire
-                    para futuros proyectos juntos.
-                  </p>
-                  <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                    <Tab.Content
-                      id="slideInUp"
-                      className={
-                        isVisible ? "animate__animated animate__slideInUp" : ""
-                      }
-                    >
-                      <Tab.Pane eventKey="first">
-                        <Row>
-                          {projects.map((project, index) => {
-                            return <ProjectCard key={index} {...project} />;
-                          })}
-                        </Row>
-                      </Tab.Pane>
-                    </Tab.Content>
-                  </Tab.Container>
-                </div>
-              )}
+              <div className={"animate__animated animate__fadeIn"}>
+                <h2>Projectos</h2>
+                <p className="text-width">
+                  Aquí verás mis trabajos en multiples tecnologías. Cada
+                  proyecto demuestra mi capacidad para trabajar en equipo,
+                  resolver problemas y cumplir requisitos. Espero que mi
+                  experiencia te inspire para futuros proyectos juntos.
+                </p>
+                <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                  <Tab.Content
+                    id="slideInUp"
+                    className={"animate__animated animate__slideInUp"}
+                  >
+                    <Tab.Pane eventKey="first">
+                      <Row>
+                        {projects.map((project, index) => {
+                          return <ProjectCard key={index} {...project} />;
+                        })}
+                      </Row>
+                    </Tab.Pane>
+                  </Tab.Content>
+                </Tab.Container>
+              </div>
             </TrackVisibility>
           </Col>
         </Row>

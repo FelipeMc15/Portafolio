@@ -9,7 +9,7 @@ export const Contact = () => {
     firstName: "",
     lastName: "",
     email: "",
-    phone: "",
+    asunto: "",
     message: "",
   };
   const [formDetails, setFormDetails] = useState(formInitialDetails);
@@ -61,7 +61,7 @@ export const Contact = () => {
                     isVisible ? "animate__animated animate__zoomIn" : ""
                   }
                   src={contactImg}
-                  alt="Contact Us"
+                  alt="Contacto"
                 />
               )}
             </TrackVisibility>
@@ -110,10 +110,10 @@ export const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="tel"
-                          value={formDetails.phone}
-                          placeholder="Numero de Celular"
+                          value={formDetails.asunto}
+                          placeholder="Asunto"
                           onChange={(e) =>
-                            onFormUpdate("phone", e.target.value)
+                            onFormUpdate("asunto", e.target.value)
                           }
                         />
                       </Col>

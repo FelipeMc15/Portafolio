@@ -648,3 +648,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .text-width {
   min-width: 500px;
 }
+
+.logo {
+  width: 70px;
+  height: 80px;
+  margin: 8px;
+}
