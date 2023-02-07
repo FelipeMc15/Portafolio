@@ -7,6 +7,7 @@ import meter6 from "../assets/img/iconPostgreSql.svg";
 import meter7 from "../assets/img/iconMongoDb.svg";
 import meter8 from "../assets/img/iconScrum.svg";
 import meter9 from "../assets/img/iconUi.svg";
+import meter10 from "../assets/img/iconRedux.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import arrow1 from "../assets/img/arrow1.svg";
@@ -59,6 +60,10 @@ export const Skills = () => {
                 <div className="item">
                   <img src={meter3} alt="Image" />
                   <h5>React.js</h5>
+                </div>
+                <div className="item">
+                  <img src={meter10} alt="Image" />
+                  <h5>Redux</h5>
                 </div>
                 <div className="item">
                   <img src={meter4} alt="Image" />
