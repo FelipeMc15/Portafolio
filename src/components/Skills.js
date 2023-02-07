@@ -10,14 +10,10 @@ import meter9 from "../assets/img/iconUi.svg";
 import meter10 from "../assets/img/iconRedux.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png";
 
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -50,43 +46,43 @@ export const Skills = () => {
                 className="owl-carousel owl-theme skill-slider"
               >
                 <div className="item">
-                  <img src={meter1} alt="Image" />
+                  <img src={meter1} alt="TypeScript Logo" />
                   <h5>TypeScript</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt="Image" />
+                  <img src={meter2} alt="JavaScript Logo" />
                   <h5>JavaScript</h5>
                 </div>
                 <div className="item">
-                  <img src={meter3} alt="Image" />
+                  <img src={meter3} alt="React Logo" />
                   <h5>React.js</h5>
                 </div>
                 <div className="item">
-                  <img src={meter10} alt="Image" />
+                  <img src={meter10} alt="Redux" />
                   <h5>Redux</h5>
                 </div>
                 <div className="item">
-                  <img src={meter4} alt="Image" />
+                  <img src={meter4} alt="Node Logo" />
                   <h5>Node.js</h5>
                 </div>
                 <div className="item">
-                  <img src={meter5} alt="Image" />
+                  <img src={meter5} alt="Express Logo" />
                   <h5>Express</h5>
                 </div>
                 <div className="item">
-                  <img src={meter6} alt="Image" />
+                  <img src={meter6} alt="PostgreSQL Logo" />
                   <h5>PostgreSQL</h5>
                 </div>
                 <div className="item">
-                  <img src={meter7} alt="Image" />
+                  <img src={meter7} alt="MongoDB Logo" />
                   <h5>MongoDB</h5>
                 </div>
                 <div className="item">
-                  <img src={meter8} alt="Image" />
+                  <img src={meter8} alt="Scrum Logo" />
                   <h5>Metodología Scrum</h5>
                 </div>
                 <div className="item">
-                  <img src={meter9} alt="Image" />
+                  <img src={meter9} alt="UI/UX Logo" />
                   <h5>UI/UX designer</h5>
                 </div>
               </Carousel>
@@ -94,7 +90,6 @@ export const Skills = () => {
           </div>
         </div>
       </div>
-      <img className="background-image-left" src={colorSharp} alt="Image" />
     </section>
   );
 };

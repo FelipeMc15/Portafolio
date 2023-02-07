@@ -1,10 +1,9 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Col, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-dog.png";
 import projImg2 from "../assets/img/project-grupal.png";
 import projImg3 from "../assets/img/hackaton-midu.png";
 import projImg4 from "../assets/img/project-notas.png";
-import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
@@ -37,18 +36,17 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="project" id="projectos">
+    <section className="project" id="proyectos">
       <Container>
         <Row>
           <Col size={12}>
             <TrackVisibility>
               <div className={"animate__animated animate__fadeIn"}>
-                <h2>Projectos</h2>
-                <p className="text-width">
+                <h2>Proyectos</h2>
+                <p>
                   Aquí verás mis trabajos en multiples tecnologías. Cada
                   proyecto demuestra mi capacidad para trabajar en equipo,
-                  resolver problemas y cumplir requisitos. Espero que mi
-                  experiencia te inspire para futuros proyectos juntos.
+                  resolver problemas y cumplir requisitos.
                 </p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Tab.Content
@@ -69,7 +67,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      <img className="background-image-right" src="{colorSharp2}"></img>
     </section>
   );
 };

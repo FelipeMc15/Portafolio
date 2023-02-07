@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
+import contactImg from "../assets/img/contact-img.jpg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 export const Contact = () => {
   const formInitialDetails = {
     firstName: "",
-    lastName: "",
+    primerApellido: "",
     email: "",
     asunto: "",
     message: "",
@@ -85,10 +85,10 @@ export const Contact = () => {
                     <Col size={12} sm={6} className="px-1">
                       <input
                         type="text"
-                        value={formDetails.lasttName}
-                        placeholder="Ultimo Nombre"
+                        value={formDetails.primerApellido}
+                        placeholder="Primer Apellido"
                         onChange={(e) =>
-                          onFormUpdate("lastName", e.target.value)
+                          onFormUpdate("primerApellido", e.target.value)
                         }
                       />
                     </Col>
@@ -102,7 +102,7 @@ export const Contact = () => {
                     </Col>
                     <Col size={12} sm={6} className="px-1">
                       <input
-                        type="tel"
+                        type="text"
                         value={formDetails.asunto}
                         placeholder="Asunto"
                         onChange={(e) => onFormUpdate("asunto", e.target.value)}
@@ -112,7 +112,7 @@ export const Contact = () => {
                       <textarea
                         rows="6"
                         value={formDetails.message}
-                        placeholder="Asunto"
+                        placeholder="Mensaje"
                         onChange={(e) =>
                           onFormUpdate("message", e.target.value)
                         }
