@@ -3,14 +3,15 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.jpg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
   const formInitialDetails = {
-    firstName: "",
+    primerNombre: "",
     primerApellido: "",
     email: "",
     asunto: "",
-    message: "",
+    mensaje: "",
   };
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState("Enviar");
@@ -26,27 +27,31 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Enviando...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
+    emailjs
+      .send(
+        "service_xf4cd8h",
+        "template_xn6iotd",
+        formDetails,
+        "WgljBikTONIwWls1P"
+      )
+      .then(
+        function (response) {
+          console.log(response);
+          setStatus({
+            succes: true,
+            message: "El mensaje se ha enviado correctamente.",
+          });
+        },
+        function (error) {
+          console.log(error);
+          setStatus({
+            succes: false,
+            message: "Ha ocurrido un error, Por favor intentalo nuevamente.",
+          });
+        }
+      );
     setButtonText("Enviar");
-    let result = await response.json();
     setFormDetails(formInitialDetails);
-    if (result.code === 200) {
-      setStatus({
-        succes: true,
-        message: "El mensaje se ha enviado correctamente.",
-      });
-    } else {
-      setStatus({
-        succes: false,
-        message: "Ha ocurrido un error, Por favor intentalo nuevamente.",
-      });
-    }
   };
 
   return (
@@ -78,7 +83,7 @@ export const Contact = () => {
                         value={formDetails.firstName}
                         placeholder="Primer Nombre"
                         onChange={(e) =>
-                          onFormUpdate("firstName", e.target.value)
+                          onFormUpdate("primerNombre", e.target.value)
                         }
                       />
                     </Col>
@@ -114,7 +119,7 @@ export const Contact = () => {
                         value={formDetails.message}
                         placeholder="Mensaje"
                         onChange={(e) =>
-                          onFormUpdate("message", e.target.value)
+                          onFormUpdate("mensaje", e.target.value)
                         }
                       ></textarea>
                       <button type="submit">
