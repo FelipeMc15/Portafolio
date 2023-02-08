@@ -82,6 +82,11 @@ export const NavBar = () => {
                   <img src={navIcon2} alt="" />
                 </a>
               </div>
+              <a href="./cv.pdf" download="CV Felipe Morales">
+                <button className="vvd">
+                  <span>Descargar CV</span>
+                </button>
+              </a>
               <HashLink to="#conectar">
                 <button className="vvd">
                   <span>Contacto</span>
